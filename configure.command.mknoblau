@@ -1,0 +1,1 @@
+./configure --prefix=/opt/openfortivpn --sysconfdir=/opt/openfortivpn/etc --with-systemdsystemunitdir==/opt/openfortivpn/lib/system
