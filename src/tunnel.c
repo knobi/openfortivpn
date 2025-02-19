@@ -32,6 +32,7 @@
 #include "userinput.h"
 
 #include <openssl/err.h>
+#define OPENSSL_NO_ENGINE
 #ifndef OPENSSL_NO_ENGINE
 #include <openssl/engine.h>
 #endif

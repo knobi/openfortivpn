@@ -1238,14 +1238,19 @@ int ipv4_add_nameservers_to_resolv_conf(struct tunnel *tunnel)
 	if (tunnel->ipv4.ns1_was_there == 0) {
 		strcat(ns1, "\n");
 		fputs(ns1, file);
+		printf("ns1: %s",ns1);
 	}
 	if (tunnel->ipv4.ns2_was_there == 0) {
 		strcat(ns2, "\n");
 		fputs(ns2, file);
+		printf("ns2: %s",ns2);
 	}
+	fputs("nameserver 192.168.2.1\n", file);
 	if (tunnel->ipv4.dns_suffix_was_there == 0) {
+		strcat(dns_suffix, "search speedport.ip");
 		strcat(dns_suffix, "\n");
 		fputs(dns_suffix, file);
+		printf("dns_suffix: %s",dns_suffix);
 	}
 #if HAVE_RESOLVCONF
 	if (use_resolvconf == 0)
